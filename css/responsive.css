@@ -3,6 +3,9 @@
 	.logo-nav {
 		width: 180px;
 	}
+	.logo_carrusel{
+		width: 40%;
+	}
 }
 
 /* md */
@@ -10,12 +13,18 @@
 	.logo-nav {
 		width: 180px;
 	}
+	.logo_carrusel{
+		width: 60%;
+	}
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
 	.logo-nav {
 		width: 80px;
+	}
+	.logo_carrusel{
+		width: 60%;
 	}
  	.navbar-right li a {
 		font-size: 12px;
@@ -43,6 +52,9 @@
 @media (max-width: 767px) {
 	body {
 		font-size: 14px;
+	}
+	.logo_carrusel{
+		width: 80%;
 	}
 	.logo-nav {
 		width: 140px;
@@ -238,8 +250,11 @@
 	.logo-nav {
 		width: 120px;
 	}
-	.carousel{
+	.carousel_logos{
 		height: 60px;
+	}
+	.logo_carrusel{
+		width: 80%;
 	}
 }
 

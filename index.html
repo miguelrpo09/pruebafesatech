@@ -13,7 +13,7 @@
   <link href="css/main.css" rel="stylesheet">
   <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
 
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -35,14 +35,14 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Bienvenido a <span><img src="images/logo.webp" style="width: 30%;" alt=""></span></h1>
+            <h1 class="animated fadeInLeftBig">Bienvenido a <span><img src="images/logo.webp" class="logo_carrusel" alt=""></span></h1>
             <p class="animated fadeInRightBig">Conoce nuestros servicios y mejora el rendimiento de tu empresa.</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Inicia Ahora</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/2.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span><img src="images/logo.webp" style="width: 30%;" alt=""></span></h1>
+            <h1 class="animated fadeInLeftBig">Say Hello to <span><img src="images/logo.webp" class="logo_carrusel" alt=""></span></h1>
             <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Inicia Ahora</a>
           </div>
@@ -769,30 +769,29 @@
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
           <div class="row">
             <div class="col-sm-6">
-              <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                <div class="row wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Nombre" required>
-                        </div>
+              <form id="main-contact-form" name="contact-form" method="post" action="#">
+                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control" placeholder="Nombre" required="required">
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
-                        </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="Email" required="required">
                     </div>
+                  </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="subject" class="form-control" placeholder="Asunto" required>
+                  <input type="text" name="subject" class="form-control" placeholder="Asunto" required="required">
                 </div>
                 <div class="form-group">
-                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Escribe el mensaje" required></textarea>
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Escribe el mensaje" required="required"></textarea>
                 </div>                        
                 <div class="form-group">
-                    <button type="submit" class="btn-submit">Enviar</button>
+                  <button type="submit" class="btn-submit">Enviar</button>
                 </div>
-            </form>
-              
+              </form>   
             </div>
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
