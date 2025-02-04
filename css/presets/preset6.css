@@ -1,0 +1,64 @@
+:root{
+	--color_primario: #004A87;
+	--color_segundario: #FF8200;
+	--color_tercero: #fff;
+	--color_cuarto: #2998ff;
+	--color_quinto: #ffb900;
+  
+  }
+
+
+a,
+#home-slider .caption h1 span, 
+#twitter-carousel .item span, 
+#footer .footer-bottom, 
+#single-portfolio .close-folio-item:hover, 
+.single-table.featured .btn.btn-primary, 
+.contact-info ul li a:hover, 
+#footer .footer-bottom a  {
+  color: var(--color_cuarto);
+}
+
+.btn.btn-primary:hover,
+.btn-submit:hover {
+  background-color: var(--color_segundario);
+}
+
+a:hover, a:focus {
+	color: var(--color_segundario);
+}
+
+.main-nav, 
+.service-icon, 
+.progress-bar.progress-bar-primary, 
+.single-table.featured, 
+.btn.btn-primary, 
+.twitter-icon .fa-twitter, 
+.twitter-left-control:hover, .twitter-right-control:hover, 
+.post-icon, 
+.entry-header .date:after, 
+.btn-loadmore:hover, 
+.btn-submit,
+#footer, 
+.caption .btn-start:hover, 
+.left-control:hover, 
+.right-control:hover, 
+.folio-overview a:hover {
+  background-color:var(--color_cuarto);
+}
+
+.twitter-left-control:hover, 
+.twitter-right-control:hover, 
+.btn-loadmore:hover  {
+	border: 1px solid var(--color_cuarto);
+}
+
+.caption .btn-start:hover, 
+.left-control:hover, 
+.right-control:hover {
+	border-color: var(--color_cuarto);
+}
+
+.twitter-icon .fa-twitter:after {
+	border-color: var(--color_cuarto) transparent transparent;
+}
