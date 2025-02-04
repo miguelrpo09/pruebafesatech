@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy website on push fesatech2
+name: 🚀 Deploy website on push pruebafesatech
 jobs:
   web-deploy:
     name: 🎉 Deploy
