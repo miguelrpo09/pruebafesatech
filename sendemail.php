@@ -4,7 +4,7 @@ if (isset($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message'])
     $from    = trim($_POST['email']); 
     $subject = trim($_POST['subject']); 
     $message = trim($_POST['message']);  
-    $to      = 'miguelrpo09@gmail.com'; // Reemplaza con tu correo
+    $to      = 'no-reply@generandocodigo.com'; // Reemplaza con tu correo
 
     // Validación del correo electrónico
     if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
