@@ -6,6 +6,10 @@
 	.logo_carrusel{
 		width: 40%;
 	}
+	.logo_whatsapp{
+		width: 10%;
+		height: 10%;
+	}
 }
 
 /* md */
@@ -16,10 +20,18 @@
 	.logo_carrusel{
 		width: 60%;
 	}
+	.logo_whatsapp{
+		width: 5%;
+		height: 5%;
+	}
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
+	.logo_whatsapp{
+		width: 5%;
+		height: 5%;
+	}
 	.logo-nav {
 		width: 80px;
 	}
@@ -52,6 +64,10 @@
 @media (max-width: 767px) {
 	body {
 		font-size: 14px;
+	}
+	.logo_whatsapp{
+		width: 5%;
+		height: 5%;
 	}
 	.logo_carrusel{
 		width: 80%;
@@ -246,6 +262,10 @@
 	.blog-posts .col-sm-4 {
 		width:100%;
 		float: none;
+	}
+	.logo_whatsapp{
+		width: 5%;
+		height: 5%;
 	}
 	.logo-nav {
 		width: 120px;
