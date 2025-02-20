@@ -149,7 +149,7 @@ section {
   left: 0;
   right: 0;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   z-index: 15;
   font-size: 18px;
   font-weight: 300;
