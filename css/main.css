@@ -193,7 +193,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.7); 
 }
 
 .carousel-fade .carousel-inner .active {
@@ -269,7 +269,7 @@ section {
 }
 
 .navbar-right li a {
-  color: var(--color_tercero);
+  color: var(--color_primario);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
@@ -278,7 +278,9 @@ section {
 }
 
 .navbar-right li.active a {
-  background-color: rgba(0,0,0,.2);
+  background-color: var(--color_primario);
+  color: var(--color_tercero);
+  /* background-color: rgba(0,0,0,.2); */
 }
 
 .navbar-brand h1 {
@@ -301,25 +303,25 @@ section {
   transition: background-color 0.2s ease;
 }
 
-.our-services .col-sm-4:hover .service-icon {
+.our-services .col-sm-5:hover .service-icon {
   background-color: #333;
 }
 
-.our-services .col-sm-4 {
-  border-right:1px solid #f2f2f2;
-  border-bottom:1px solid #f2f2f2;
+.our-services .col-sm-5 {
+  /* border-right:1px solid #f2f2f2;
+  border-bottom:1px solid #f2f2f2; */
   padding-bottom: 50px;
 }
 
-.our-services .col-sm-4:nth-child(4), 
-.our-services .col-sm-4:nth-child(5), 
-.our-services .col-sm-4:nth-child(6) {
+.our-services .col-sm-5:nth-child(4), 
+.our-services .col-sm-5:nth-child(5), 
+.our-services .col-sm-5:nth-child(6) {
   border-bottom:0;
   padding-top: 60px;
 }
 
-.our-services .col-sm-4:nth-child(3), 
-.our-services .col-sm-4:nth-child(6) {
+.our-services .col-sm-5:nth-child(3), 
+.our-services .col-sm-5:nth-child(6) {
   border-right:0;
 }
 
@@ -331,7 +333,7 @@ section {
 ********About CSS*******
 **************************/
 #about-us {
-  background-image: url(../images/about-bg.jpg);
+  background-image: url(../images/Agenda.png);
   padding: 60px 0;
 }
 
@@ -957,7 +959,8 @@ ul.address {
 }
 
 #footer .social-icons ul li a {
-  background-color: rgba(0,0,0,.2);
+  background-color: var(--color_primario);
+  /* background-color: rgba(0,0,0,.2); */
   border-radius: 4px;
   line-height: 33px;
 }

@@ -2,7 +2,7 @@
 	--color_primario: #004A87;
 	--color_segundario: #FF8200;
 	--color_tercero: #fff;
-	--color_cuarto: #2998ff;
+	--color_cuarto: #8ebbff;
 	--color_quinto: #ffb900;
   
   }
@@ -27,24 +27,29 @@ a,
 a:hover, a:focus {
 	color: var(--color_segundario);
 }
-
-.main-nav, 
-.service-icon, 
-.progress-bar.progress-bar-primary, 
+.progress-bar.progress-bar-primary{
+	background-color: var(--color_cuarto);
+}
+#footer,
+.main-nav,   
 .single-table.featured, 
-.btn.btn-primary, 
 .twitter-icon .fa-twitter, 
 .twitter-left-control:hover, .twitter-right-control:hover, 
 .post-icon, 
 .entry-header .date:after, 
-.btn-loadmore:hover, 
-.btn-submit,
-#footer, 
+.btn-loadmore:hover,
+.btn-submit
+ {
+  background-color:var(--color_tercero);
+}
+
 .caption .btn-start:hover, 
 .left-control:hover, 
 .right-control:hover, 
-.folio-overview a:hover {
-  background-color:var(--color_cuarto);
+.folio-overview a:hover,
+.service-icon,
+.btn.btn-primary{
+	background-color: var(--color_primario);
 }
 
 .twitter-left-control:hover, 
