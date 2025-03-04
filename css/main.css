@@ -333,7 +333,7 @@ section {
 ********About CSS*******
 **************************/
 #about-us {
-  background-image: url(../images/Agenda.png);
+  background-image: url(../images/nosotros.webp);
   padding: 60px 0;
 }
 
@@ -594,7 +594,7 @@ section {
 **************************/
 #features {
   text-align: center;
-  background-image: url(../images/features.jpg);
+  background-image: url(../images/features.webp);
 }
 
 #features i {
