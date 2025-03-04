@@ -1024,7 +1024,7 @@ ul.address {
 /*Presets*/
 
 /* boton whatsapp */
-.whats-float {
+/* .whats-float {
   position: fixed;
   transform:translate(108px,0px);
   top:25%;
@@ -1066,11 +1066,11 @@ ul.address {
 
 .whats-float:hover i  {
   transform:rotate(360deg);
-}
+} */
 
 /* boton izq */
 
-.whats-float1 {
+/* .whats-float1 {
   position: fixed;
   transform:translate(108px,0px);
   top:35%;
@@ -1112,4 +1112,100 @@ ul.address {
 
 .whats-float1:hover i  {
   transform:rotate(360deg);
+} */
+
+/* propuesta gemini */
+/* Basic styles for both buttons */
+.whats-float, .whats-float1 {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  z-index: 100; /* Ensure it's on top */
+  display: block;
+  text-decoration: none;
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: center;
+  padding: 10px;
+}
+.whats-float {
+  left: 20px; /* Position the first button */
+  background-color: #25D366; /* WhatsApp green */
+}
+.whats-float1 {
+  right: 20px; /* Position the second button */
+  background-color: #FF8200; /*Orange*/
+}
+
+.whats-float:hover, .whats-float1:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+.whats-float i, .whats-float1 i{
+  color: #fff; /* White icon */
+  font-size: 24px; /* Larger icon */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.whats-float span, .whats-float1 span{
+  color: #fff; /* White text */
+  font-size: 16px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.whats-float small, .whats-float1 small {
+  display: block;
+  font-size: 12px;
+  color: white;
+  font-weight: normal;
+}
+/* Animation in all the resolutions */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.whats-float,.whats-float1 {
+  animation: pulse 2s infinite;
+}
+/* Adapt the buttons to the resolutions */
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  .whats-float, .whats-float1{
+  padding: 5px;
+  }
+  .whats-float i, .whats-float1 i{
+      font-size: 15px; 
+      margin-right: 5px; 
+  }
+  .whats-float span, .whats-float1 span{
+      font-size: 10px;
+  }
+  .whats-float small, .whats-float1 small {
+      font-size: 8px;
+  }
+}
+/* xs */
+@media (max-width: 767px) {
+  .whats-float, .whats-float1{
+  padding: 5px;
+  }
+  .whats-float i, .whats-float1 i{
+      font-size: 15px; 
+      margin-right: 5px; 
+  }
+  .whats-float span, .whats-float1 span{
+      font-size: 10px;
+  }
+  .whats-float small, .whats-float1 small {
+      font-size: 8px;
+  }
 }
