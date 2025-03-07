@@ -13,7 +13,31 @@
   <meta property="og:type" content="website" />
   <meta name="author" content="">
   <title>FesaTech - Inicio</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Defer non-critical CSS -->
+  <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+  
+  <link rel="preload" href="css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/animate.min.css"></noscript>
+
+  <link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript>
+
+  <link rel="preload" href="css/lightbox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/lightbox.css"></noscript>
+
+  <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+
+  <link id="css-preset" rel="preload" href="css/presets/preset6.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/presets/preset6.css"></noscript>
+
+  <link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/responsive.css"></noscript>
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico">
+ <!--  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet"> 
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/lightbox.css" rel="stylesheet">
@@ -21,10 +45,102 @@
   <link id="css-preset" href="css/presets/preset6.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+   -->
   <link rel="shortcut icon" href="images/favicon.ico">
 </head><!--/head-->
 
 <body>
+  <style>
+    /* Extracted Critical CSS from main.css (Example - You need to extract the real one)*/
+    /* Basic styles */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        color: #666;
+        background-color: #fff;
+    }
+    /*colors*/
+    :root{
+        --color_primario: #004A87;
+        --color_segundario: #FF8200;
+        --color_tercero: #fff;
+        --color_cuarto: #2998ff;
+        --color_quinto: #ffb900;
+      
+      }
+    h1, h2, h3, h4, h5, h6 {
+        color: #333;
+    }
+    .btn {
+        border: 0;
+        border-radius: 0;
+    }
+    a {
+        text-decoration: none;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -o-transition: 300ms;
+        transition: 300ms;
+    }
+    section {
+        padding: 90px 0;
+    }
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      background: var(--color_tercero);
+    }
+    .preloader > i {
+      position: absolute;
+      font-size: 36px;
+      line-height: 36px;
+      top: 50%;
+      left: 50%;
+      height: 36px;
+      width: 36px;
+      margin-top: -15px;
+      margin-left: -15px;
+      display: inline-block;
+    }
+    /* Home slider section*/
+    #home-slider {
+        overflow: hidden;
+        position: relative;
+    }
+    #home-slider .caption {
+        position: absolute;
+        top: 50%;
+        margin-top: -104px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 15;
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--color_tercero);
+    }
+    #home-slider .caption h1 {
+        color: var(--color_tercero);
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .caption .btn-start {
+        color: var(--color_tercero);
+        font-size: 14px;
+        font-weight: 600;
+        padding:14px 40px;
+        border: 1px solid #6e6d6c;
+        border-radius: 4px;
+        margin-top: 40px;
+    }
+    /* ... Add all the critical CSS here ... */
+  </style>
 
 
   <!--.preloader-->
@@ -358,7 +474,18 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <!-- ... rest of your HTML ... -->
+  <script type="text/javascript" src="js/jquery.js" defer></script>
+  <script type="text/javascript" src="js/bootstrap.min.js" defer></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js" defer></script>
+  <script type="text/javascript" src="js/wow.min.js" defer></script>
+  <script type="text/javascript" src="js/mousescroll.js" defer></script>
+  <script type="text/javascript" src="js/smoothscroll.js" defer></script>
+  <script type="text/javascript" src="js/jquery.countTo.js" defer></script>
+  <script type="text/javascript" src="js/lightbox.min.js" defer></script>
+  <script type="text/javascript" src="js/main.js" defer></script>
+  <script async src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<!--   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <script type="text/javascript" src="js/jquery.inview.min.js"></script>
@@ -367,7 +494,7 @@
   <script type="text/javascript" src="js/smoothscroll.js"></script>
   <script type="text/javascript" src="js/jquery.countTo.js"></script>
   <script type="text/javascript" src="js/lightbox.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script> -->
 
 </body>
 </html>
