@@ -965,6 +965,15 @@ ul.address {
   line-height: 33px;
 }
 /* Carrusel logos */
+
+.logo-container {
+  width: 100px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo-carousel-widget-logos {
 	width: 100%;
 	overflow: hidden;
@@ -997,6 +1006,7 @@ ul.address {
 	}
 }
 
+
 #footer .social-icons ul li a:hover {
   color: var(--color_tercero)
 }
@@ -1023,96 +1033,6 @@ ul.address {
 
 /*Presets*/
 
-/* boton whatsapp */
-/* .whats-float {
-  position: fixed;
-  transform:translate(108px,0px);
-  top:25%;
-  right:0;
-  width:150px;
-  overflow: hidden;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 2px 0 0 2px;
-  z-index: 10;
-  transition: all 0.5s ease-in-out;
-  vertical-align: middle
-}
-.whats-float a span {
-  color: white;
-  font-size: 15px;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  position: absolute;
-  line-height: 16px;
-  font-weight: bolder;
-}
-
-.whats-float i {
-  font-size: 30px;
-  color: white;
-  line-height: 30px;
-  padding: 10px;
-  transform:rotate(0deg);
-  transition: all 0.5s ease-in-out;
-  text-align:center;
-
-}
-
-.whats-float:hover {
-  color: #FFFFFF;
-  transform:translate(0px,0px);
-}
-
-.whats-float:hover i  {
-  transform:rotate(360deg);
-} */
-
-/* boton izq */
-
-/* .whats-float1 {
-  position: fixed;
-  transform:translate(108px,0px);
-  top:35%;
-  right:0;
-  width:150px;
-  overflow: hidden;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 2px 0 0 2px;
-  z-index: 10;
-  transition: all 0.5s ease-in-out;
-  vertical-align: middle
-}
-.whats-float1 a span {
-  color: white;
-  font-size: 15px;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  position: absolute;
-  line-height: 16px;
-  font-weight: bolder;
-}
-
-.whats-float1 i {
-  font-size: 30px;
-  color: white;
-  line-height: 30px;
-  padding: 10px;
-  transform:rotate(0deg);
-  transition: all 0.5s ease-in-out;
-  text-align:center;
-
-}
-
-.whats-float1:hover {
-  color: #FFFFFF;
-  transform:translate(0px,0px);
-}
-
-.whats-float1:hover i  {
-  transform:rotate(360deg);
-} */
 
 /* propuesta gemini */
 /* Basic styles for both buttons */
@@ -1209,3 +1129,5 @@ ul.address {
       font-size: 8px;
   }
 }
+
+
