@@ -1057,6 +1057,9 @@ ul.address {
   right: 20px; /* Position the second button */
   background-color: #FF8200; /*Orange*/
 }
+.whats-float, .whats-float1 {
+  position: fixed;
+  }
 
 .whats-float:hover, .whats-float1:hover {
   transform: scale(1.05); /* Slightly scale up on hover */
