@@ -564,8 +564,8 @@ section {
 .team-member:hover .social-icons ul li a.twitter {
   background-color: #2ac6f7;
 }
-.team-member:hover .social-icons ul li a.dribbble {
-  background-color: #ff5b92;
+.team-member:hover .social-icons ul li a.instagram {
+  background-color: #E1306C;
 }
 .team-member:hover .social-icons ul li a.linkedin {
   background-color: #036dc0;
@@ -573,6 +573,7 @@ section {
 .team-member:hover .social-icons ul li a.rss {
   background-color: #ff6b00;
 }
+
 
 #team .img-responsive {
   width: 100%;
@@ -1021,8 +1022,8 @@ ul.address {
 #footer .social-icons ul li a.twitter:hover {
   background-color: #2ac6f7;
 }
-#footer .social-icons ul li a.dribbble:hover {
-  background-color: #ff5b92;
+#footer .social-icons ul li a.instagram:hover {
+  background: linear-gradient(#5851DB,#833AB4,#C13584, #E1306C);
 }
 #footer .social-icons ul li a.linkedin:hover {
   background-color: #036dc0;
