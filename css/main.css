@@ -304,7 +304,7 @@ section {
 }
 
 .our-services .col-sm-5:hover .service-icon {
-  background-color: #333;
+  background-color: var(--color_segundario);
 }
 
 .our-services .col-sm-5 {
