@@ -1025,6 +1025,7 @@ ul.address {
 #footer .social-icons ul li a.instagram:hover {
   background: linear-gradient(#5851DB,#833AB4,#C13584, #E1306C);
 }
+
 #footer .social-icons ul li a.linkedin:hover {
   background-color: #036dc0;
 }
@@ -1133,5 +1134,7 @@ ul.address {
       font-size: 8px;
   }
 }
+
+
 
 
