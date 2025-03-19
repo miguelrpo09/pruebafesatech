@@ -298,5 +298,17 @@
 		width: 80%;
 		height: 80%;
 	}
+	section {
+		padding: 1px 0;
+	}
+	
 }
+
+@media (max-width: 390px) {
+	section {
+		padding: 1px 0;
+	}
+
+}
+
 
