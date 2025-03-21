@@ -1134,6 +1134,14 @@ ul.address {
       font-size: 8px;
   }
 }
+@media (forced-colors: active) {
+  /* Styles for forced colors mode */
+  body {
+    background-color: Canvas; /* System background color */
+    color: CanvasText; /* System text color */
+  }
+  /* Add more styles as needed */
+}
 
 
 
