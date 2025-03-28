@@ -139,8 +139,8 @@ jQuery(function($) {
 /* Carrusel */
 
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider-track');
-    const container = document.querySelector('.slider-container');
+    const slider1 = document.querySelector('.slider1-track');
+    const container = document.querySelector('.slider1-container');
     let isDragging = false;
     let startPosition = 0;
     let currentTranslate = 0;
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setSliderPosition() {
-        slider.style.transform = `translateX(${currentTranslate}px)`;
+        slider1.style.transform = `translateX(${currentTranslate}px)`;
     }
 
     function animation() {
@@ -166,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
         startPosition = getPositionX(event);
         currentPosition = startPosition;
         
-        slider.classList.add('dragging');
-        slider.style.animation = 'none';
+        slider1.classList.add('dragging');
+        slider1.style.animation = 'none';
         
         cancelAnimationFrame(animationID);
         
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Limitar el arrastre
         const maxTranslate = 0;
-        const minTranslate = -(slider.offsetWidth / 2);
+        const minTranslate = -(slider1.offsetWidth / 2);
         
         if (currentTranslate > maxTranslate) {
             currentTranslate = maxTranslate;
@@ -202,14 +202,14 @@ document.addEventListener('DOMContentLoaded', function() {
         previousTranslate = currentTranslate;
         
         // Reiniciar posición si llega a los extremos
-        if (currentTranslate === 0 || currentTranslate <= -(slider.offsetWidth / 2)) {
+        if (currentTranslate === 0 || currentTranslate <= -(slider1.offsetWidth / 2)) {
             previousTranslate = 0;
             currentTranslate = 0;
-            slider.style.transform = 'translateX(0)';
+            slider1.style.transform = 'translateX(0)';
         }
         
-        slider.classList.remove('dragging');
-        slider.style.animation = '';
+        slider1.classList.remove('dragging');
+        slider1.style.animation = '';
         container.style.cursor = 'grab';
     }
 
