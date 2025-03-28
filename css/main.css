@@ -1158,7 +1158,7 @@ ul.address {
 
 .slider1-track {
     display: flex;
-    width: calc(200px * 24);
+    width: calc(160px * 24);
     animation: scroll 30s linear infinite;
     position: relative;
     left: 0;
@@ -1166,8 +1166,8 @@ ul.address {
 }
 
 .slide1 {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     flex-shrink: 0;
     padding: 10px;
     box-sizing: border-box;
@@ -1197,7 +1197,7 @@ ul.address {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-200px * 20));
+        transform: translateX(calc(-160px * 20));
     }
 }
 
@@ -1211,36 +1211,36 @@ ul.address {
 
 @media screen and (max-width: 768px) {
     .slide1 {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
     .slider1-track {
-        width: calc(150px * 24);
+        width: calc(120px * 24);
     }
     @keyframes scroll {
         0% {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-150px * 20));
+            transform: translateX(calc(-120px * 20));
         }
     }
 }
 
 @media screen and (max-width: 480px) {
     .slide1 {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
     .slider1-track {
-        width: calc(100px * 24);
+        width: calc(80px * 24);
     }
     @keyframes scroll {
         0% {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-100px * 20));
+            transform: translateX(calc(-80px * 20));
         }
     }
 }
