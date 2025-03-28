@@ -134,40 +134,97 @@ jQuery(function($) {
 			form_status.html('<p class="text-success">Gracias por contactarnos. Nos pondremos en contacto con usted lo antes posible.</p>').delay(3000).fadeOut();
 		});
 	});
-});
 
+	
 /* Carrusel */
 
-// JavaScript para clonar logos y hacer el carrusel infinito
-
 document.addEventListener('DOMContentLoaded', function() {
-    const carousels = document.querySelectorAll('.carousel_logos');
+    const slider = document.querySelector('.slider-track');
+    const container = document.querySelector('.slider-container');
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let previousTranslate = 0;
+    let animationID = 0;
+    let currentPosition = 0;
 
-    carousels.forEach(carousel => {
-        const clone = carousel.cloneNode(true); // Clona el carrusel completo
-        carousel.parentNode.appendChild(clone); // Agrega el clon al final del contenedor
-    });
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    function setSliderPosition() {
+        slider.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function touchStart(event) {
+        isDragging = true;
+        startPosition = getPositionX(event);
+        currentPosition = startPosition;
+        
+        slider.classList.add('dragging');
+        slider.style.animation = 'none';
+        
+        cancelAnimationFrame(animationID);
+        
+        container.style.cursor = 'grabbing';
+    }
+
+    function touchMove(event) {
+        if (!isDragging) return;
+        
+        const currentPosition = getPositionX(event);
+        const diff = currentPosition - startPosition;
+        
+        currentTranslate = previousTranslate + diff;
+        
+        // Limitar el arrastre
+        const maxTranslate = 0;
+        const minTranslate = -(slider.offsetWidth / 2);
+        
+        if (currentTranslate > maxTranslate) {
+            currentTranslate = maxTranslate;
+        } else if (currentTranslate < minTranslate) {
+            currentTranslate = minTranslate;
+        }
+        
+        animationID = requestAnimationFrame(animation);
+    }
+
+    function touchEnd() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        
+        previousTranslate = currentTranslate;
+        
+        // Reiniciar posición si llega a los extremos
+        if (currentTranslate === 0 || currentTranslate <= -(slider.offsetWidth / 2)) {
+            previousTranslate = 0;
+            currentTranslate = 0;
+            slider.style.transform = 'translateX(0)';
+        }
+        
+        slider.classList.remove('dragging');
+        slider.style.animation = '';
+        container.style.cursor = 'grab';
+    }
+
+    // Event Listeners
+    container.addEventListener('mousedown', touchStart);
+    container.addEventListener('touchstart', touchStart);
+
+    container.addEventListener('mousemove', touchMove);
+    container.addEventListener('touchmove', touchMove);
+
+    container.addEventListener('mouseup', touchEnd);
+    container.addEventListener('touchend', touchEnd);
+    container.addEventListener('mouseleave', touchEnd);
+
+    // Prevenir el comportamiento por defecto del arrastre
+    container.addEventListener('dragstart', (e) => e.preventDefault());
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-	const navHeight = document.querySelector('.main-nav').offsetHeight;
-
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-
-			const targetId = this.getAttribute('href');
-			const targetElement = document.querySelector(targetId);
-
-			if (targetElement) {
-				const targetPosition = targetElement.offsetTop;
-				const adjustedPosition = targetPosition - navHeight;
-
-				window.scrollTo({
-					top: adjustedPosition,
-					behavior: 'smooth' // Optional: Smooth scrolling animation
-				});
-			}
-		});
-	});
 });
